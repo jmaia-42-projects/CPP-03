@@ -6,7 +6,7 @@
 /*   By: jmaia <jmaia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 16:06:40 by jmaia             #+#    #+#             */
-/*   Updated: 2022/05/28 17:57:53 by jmaia            ###   ########.fr       */
+/*   Updated: 2022/05/28 18:11:00 by jmaia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,8 @@ DiamondTrap::~DiamondTrap(void)
 
 DiamondTrap	&DiamondTrap::operator=(DiamondTrap const &obj)
 {
-	(void) obj;
+	std::cout << "DiamondTrap: Assignment operator called" << std::endl;
+	ClapTrap::operator=(obj);
 	return (*this);
 }
 
