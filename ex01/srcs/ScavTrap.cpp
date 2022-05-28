@@ -6,7 +6,7 @@
 /*   By: jmaia <jmaia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 15:10:22 by jmaia             #+#    #+#             */
-/*   Updated: 2022/05/28 15:42:12 by jmaia            ###   ########.fr       */
+/*   Updated: 2022/05/28 15:51:08 by jmaia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,14 @@ ScavTrap	&ScavTrap::operator=(ScavTrap const &obj)
 	std::cout << "ScavTrap: Assignment operator called" << std::endl;
 	ClapTrap::operator=(obj);
 	return (*this);
+}
+
+void	ScavTrap::attack(std::string const &target)
+{
+	if (!checkCanDoAction(*this))
+		return ;
+	std::cout << "ScavTrap " << this->name << " attacks " << target << ", causing " << attackDamage << " points of damage!" << std::endl;
+	this->energyPoints--;
 }
 
 void	ScavTrap::guardGuate(void)

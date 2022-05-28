@@ -6,7 +6,7 @@
 /*   By: jmaia <jmaia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 13:19:59 by jmaia             #+#    #+#             */
-/*   Updated: 2022/05/28 15:21:24 by jmaia            ###   ########.fr       */
+/*   Updated: 2022/05/28 15:55:59 by jmaia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class	ScavTrap:	public ClapTrap
 
 		ScavTrap	&operator=(ScavTrap const &obj);
 
+		void	attack(std::string const &target);
 		void	guardGuate(void);
 };
 
